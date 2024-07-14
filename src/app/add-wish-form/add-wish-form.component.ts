@@ -4,8 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
 	selector: 'add-wish-form',
-	standalone: true,
-	imports: [FormsModule],
+	standalone: false,
 	templateUrl: './add-wish-form.component.html',
 	styleUrl: './add-wish-form.component.css'
 })
