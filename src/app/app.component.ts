@@ -18,6 +18,7 @@ import { WishFilterComponent } from './wish-filter/wish-filter.component';
     AddWishFormComponent,
     WishFilterComponent
   ],
+
 	templateUrl: './app.component.html',
 	styleUrl: './app.component.css'
 })
@@ -33,7 +34,7 @@ export class AppComponent {
   
   
   
-	filter = () => {};
+	filter:any;
   
   get visibleItems(): WishItem[] {
     return this.items.filter(this.filter)
