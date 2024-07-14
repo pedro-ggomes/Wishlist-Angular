@@ -8,7 +8,7 @@ import { WishListComponent } from './wish-list/wish-list.component';
 import { WishFilterComponent } from './wish-filter/wish-filter.component';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { WishListItemComponent } from './wish-list-item/wish-item.component';
+import { WishListItemComponent } from './wish-list-item/wish-list-item.component';
 
 @NgModule({
   declarations: [
