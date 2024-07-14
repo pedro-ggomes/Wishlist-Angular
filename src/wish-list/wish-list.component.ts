@@ -5,7 +5,8 @@ import { WishListItemComponent } from '../wish-list-item/wish-item.component';
 
 @Component({
   selector: 'wish-list',
-  standalone: false,
+  standalone: true,
+  imports: [CommonModule,WishListItemComponent],
   templateUrl: './wish-list.component.html',
   styleUrl: './wish-list.component.css'
 })

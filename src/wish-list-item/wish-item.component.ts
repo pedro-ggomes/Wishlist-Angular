@@ -1,7 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'wish-list-item',
-  standalone: false,
+  standalone: true,
+  imports: [],
   templateUrl: './wish-item.component.html',
   styleUrl: './wish-item.component.css'
 })

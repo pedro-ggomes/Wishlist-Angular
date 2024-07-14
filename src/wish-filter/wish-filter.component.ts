@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, OnInit, Input } from '@angular/core';
 import { WishItem } from '../../shared/models/wishItem';
+import { FormsModule } from '@angular/forms';
 
 const filters = [
   (item:WishItem) => item,
@@ -9,7 +10,8 @@ const filters = [
 
 @Component({
   selector: 'wish-filter',
-  standalone: false,
+  standalone: true,
+  imports: [FormsModule],
   templateUrl: './wish-filter.component.html',
   styleUrl: './wish-filter.component.css'
 })
