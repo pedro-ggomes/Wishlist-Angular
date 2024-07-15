@@ -1,0 +1,8 @@
+[
+    {"wishText":"Start studying today","isComplete":true},
+    {"wishText":"Learn Angular","isComplete":false},
+    {"wishText":"Complete Envato Tuts+'s course","isComplete":false},
+    {"wishText":"See freecodecamp's CI/CD part of the course","isComplete":false},
+    {"wishText":"Make at least another 2 Angular apps until the interview","isComplete":false},
+    {"wishText":"Get the job","isComplete":false}
+]

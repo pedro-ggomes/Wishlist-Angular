@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,20 +13,21 @@ import { WishListItemComponent } from './wish-list-item/wish-list-item.component
 import { WishFilterComponent } from './wish-filter/wish-filter.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    AddWishFormComponent,
-    WishListComponent,
-    WishListItemComponent,
-    WishFilterComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    CommonModule
-  ],
-  providers: [EventService],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		AddWishFormComponent,
+		WishListComponent,
+		WishListItemComponent,
+		WishFilterComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		FormsModule,
+		CommonModule,
+    HttpClientModule
+	],
+	providers: [EventService],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }
