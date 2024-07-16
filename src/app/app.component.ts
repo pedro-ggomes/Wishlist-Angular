@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WishItem } from '../shared/models/wishItem';
-import { EventService } from './../shared/services/EventService'
+import { WishItem } from './shared/models/wishItem';
+import { EventService } from './shared/services/EventService'
 import { WishService } from './wish.service';
 @Component({
   selector: 'app-root',
@@ -8,7 +8,7 @@ import { WishService } from './wish.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  items!: WishItem[];
+  items: WishItem[] = [];
   
   filter:any;
   
@@ -20,8 +20,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.wishService.getWishes().subscribe((data:any) => {
-      this.items = data;
+    this.wishService.getWishes().subscribe({
+      next: (data:WishItem[] | any) => this.items = data,
+      error: (error) => alert(error.message)
     })
   }
   

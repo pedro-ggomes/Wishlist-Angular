@@ -1,13 +1,13 @@
-<div *ngIf="items.length === 0; else showItems">
-    <!-- true -->
-    There are no wishes to display
-  </div>
-  <!-- else -->
-  <ng-template #showItems>
-    <ul class="wish-list">
-      <wish-list-item
-        *ngFor="let item of items"
-        [wish]="item"
-      ></wish-list-item>
-    </ul>
-  </ng-template>
+@if(items.length === 0){
+	<div>
+		There are no wishes to display
+	</div>
+}@else{
+	<ul class="wish-list">
+		@for(item of items; track item.id){
+			<wish-list-item
+				[wish]="item"
+			></wish-list-item>
+		}
+	</ul>
+}

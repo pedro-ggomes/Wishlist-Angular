@@ -1,7 +1,12 @@
 import { Component, Output, EventEmitter, Input } from '@angular/core';
-import { WishItem } from '../../shared/models/wishItem';
+import { WishItem } from '../shared/models/wishItem';
 import { FormsModule } from '@angular/forms';
 
+function getRandomInt(min:number, max:number) {
+	const minCeiled = Math.ceil(min);
+	const maxFloored = Math.floor(max);
+	return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
+}
 @Component({
 	selector: 'add-wish-form',
 	standalone: false,
@@ -14,7 +19,7 @@ export class AddWishFormComponent {
 	newWishText:string = '';
 
 	addNewWish(){
-		this.addWish.emit(new WishItem(this.newWishText));
+		this.addWish.emit(new WishItem(getRandomInt(6,20),this.newWishText));
 		this.newWishText = '';
 	}
 }
